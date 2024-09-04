@@ -1,11 +1,13 @@
+import style from '../../app/Home.module.css'
 const serverpage=(props)=>{
 
     console.log('data',props);
+    console.log('style',style);
     return(
         <>
         {props.ds.users&&
         props.ds.users.map((element) => (
-          <li key={element.id}>{element.firstName}</li>
+          <li className={style.li} key={element.id}>{element.firstName}</li>
         ))}
         </>
     )
